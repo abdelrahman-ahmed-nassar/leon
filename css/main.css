@@ -169,12 +169,44 @@ nav .links ul li:not(:last-child) a {
   font-size: 50px;
   color: var(--main-color);
 }
+
 .landing .intro-text p {
   font-size: 19px;
   line-height: 1.8;
 }
+
 @media (max-width: 767px) {
   .landing .intro-text {
     width: 300px;
   }
+}
+
+/****************** features ******************/
+.features {
+  background-color: var(--section-background);
+  padding: 60px 0;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.features .feature {
+  padding: 20px;
+  text-align: center;
+}
+
+.features .feature i {
+  color: var(--main-color);
+}
+
+.features .feature h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+.features .feature p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
 }
