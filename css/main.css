@@ -177,7 +177,7 @@ nav .links ul li:not(:last-child) a {
 
 @media (max-width: 767px) {
   .landing .intro-text {
-    width: 300px;
+    width: 350px;
   }
 }
 
