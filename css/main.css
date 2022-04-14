@@ -145,3 +145,36 @@ nav .links ul li a:hover {
 nav .links ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
 }
+/******************    landing  ****************/
+.landing {
+  background-image: url(/images/landing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 64px); /*the 64px of the nav height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .intro-text {
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+@media (max-width: 767px) {
+  .landing .intro-text {
+    width: 300px;
+  }
+}
