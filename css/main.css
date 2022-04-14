@@ -22,30 +22,126 @@ html {
 *::before {
   box-sizing: inherit;
 }
+
 body {
   font-family: "Work Sans", "system-ui";
 }
+
 ::selection {
   background-color: rgba(170, 170, 170, 0.377);
   color: #607d8b;
 }
+
 /*the container that will wrap around every section*/
 .container {
   padding: 0 15px;
   margin: 0 auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
+}
+/***************** nav-bar ***********/
+
+nav {
+  padding: 20px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 60px;
+}
+/* the container of the element to make the links move relative to it  */
+nav .links {
+  position: relative;
+}
+/* the icon container*/
+nav .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+/* the spans in the icon modifying */
+
+nav .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+nav .links .icon span:first-child {
+  width: 100%;
+}
+
+nav .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s; /* for hover effect*/
+}
+nav .links .icon span:last-child {
+  width: 100%;
+}
+/*  hover effect will work when hove ont the links*/
+nav .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+/* the links container*/
+nav .links ul {
+  background-color: var(--section-background);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1; /* to make the links come on the photo*/
+}
+/* the arrow*/
+nav .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--section-background) transparent;
+  position: absolute;
+  right: 5px; /* the width of the icon is 30px  and the arrow is 20px   */
+  top: -20px;
+}
+/*show the links bar when hover */
+nav .links:hover ul {
+  display: block;
+}
+
+/* the links decoration*/
+nav .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+/* the hover effect on the links*/
+nav .links ul li a:hover {
+  padding-left: 25px;
+}
+/* making separating line between links*/
+nav .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
 }
