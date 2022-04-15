@@ -168,7 +168,7 @@ nav .links ul li:not(:last-child) a {
 }
 /******************    landing  ****************/
 .landing {
-  background-image: url(/images/landing.jpg);
+  background-image: url(../images/landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -289,4 +289,41 @@ nav .links ul li:not(:last-child) a {
   .services .services-content .image {
     display: none;
   }
+}
+
+/********* portfolio ************/
+.portfolio {
+  padding: 60px 0;
+  background-color: var(--section-background);
+}
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .portfolio .portfolio-content .card {
+    text-align: center;
+  }
+}
+
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+.portfolio .portfolio-content .card h3 {
+  margin: 0;
+}
+.portfolio .portfolio-content .card p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
