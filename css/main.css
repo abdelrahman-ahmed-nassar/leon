@@ -9,8 +9,8 @@
 /***************** variables ********************/
 :root {
   --main-color: #10cab7;
-  --secondary-color: #2c4856;
-  --section-background: #f6f6f6;
+  --minor-color: #2c4856;
+  --card-background: #f6f6f6;
 }
 /************* global rules *******************/
 html {
@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: "Work Sans", "system-ui";
+  color: #494949;
 }
 
 ::selection {
@@ -124,7 +125,7 @@ nav .links:hover .icon span:nth-child(2) {
 }
 /* the links container*/
 nav .links ul {
-  background-color: var(--section-background);
+  background-color: var(--card-background);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -140,7 +141,7 @@ nav .links ul::before {
   content: "";
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent var(--section-background) transparent;
+  border-color: transparent transparent var(--card-background) transparent;
   position: absolute;
   right: 5px; /* the width of the icon is 30px  and the arrow is 20px   */
   top: -20px;
@@ -204,8 +205,8 @@ nav .links ul li:not(:last-child) a {
 
 /****************** features ******************/
 .features {
-  background-color: var(--section-background);
-  padding: 60px 0;
+  background-color: white;
+  /* padding: 60px 0; */
 }
 .features .container {
   display: grid;
@@ -213,8 +214,13 @@ nav .links ul li:not(:last-child) a {
   gap: 20px;
 }
 .features .feature {
-  padding: 20px;
+  padding: 60px 40px;
   text-align: center;
+}
+.features .feature:hover {
+  -webkit-box-shadow: 0px 4px 18px 0px rgb(36 39 46 / 10%);
+  -moz-box-shadow: 0px 4px 18px 0px rgba(36, 39, 46, 0.1);
+  box-shadow: 0px 4px 18px 0px rgba(36, 39, 46, 0.1);
 }
 
 .features .feature i {
@@ -233,6 +239,9 @@ nav .links ul li:not(:last-child) a {
 }
 
 /*********** services  ***********/
+.services h2 {
+  margin-top: 40px;
+}
 .services .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -274,7 +283,7 @@ nav .links ul li:not(:last-child) a {
 .services .services-content .image::before {
   content: "";
   position: absolute;
-  background-color: #2c4856;
+  background-color: var(--minor-color);
   width: 100px;
   height: calc(100% + 100px);
   top: -50px;
@@ -294,7 +303,7 @@ nav .links ul li:not(:last-child) a {
 /***************** portfolio ****************/
 .portfolio {
   padding: 60px 0;
-  background-color: var(--section-background);
+  background-color: var(--card-background);
 }
 .portfolio-content {
   display: grid;
@@ -305,9 +314,18 @@ nav .links ul li:not(:last-child) a {
 
 .portfolio .portfolio-content .card {
   background-color: white;
+  box-shadow: 0px 4px 18px 0px rgb(36 39 46 / 10%);
 }
+.portfolio .portfolio-content .card .image-container {
+  overflow: hidden;
+}
+
 .portfolio .portfolio-content .card img {
   max-width: 100%;
+  transition: 0.3s ease;
+}
+.portfolio .portfolio-content .card img:hover {
+  transform: scale(1.15);
 }
 
 @media (max-width: 767px) {
@@ -332,14 +350,21 @@ nav .links ul li:not(:last-child) a {
 }
 
 .portfolio button {
+  font-weight: bold;
+  color: #494949;
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 4px;
   width: auto;
-  border: 1px solid #000;
+  border: 1.5px solid #494949;
   margin-top: 45px;
   background-color: #fff;
+  transition: 0.3s ease-in-out;
 }
 
+.portfolio button:hover {
+  background-color: var(--minor-color);
+  color: var(--main-color);
+}
 /*********** Start About *************/
 
 .about {
@@ -418,7 +443,7 @@ nav .links ul li:not(:last-child) a {
 /* Start Contact */
 .contact {
   padding: 60px 0 60px;
-  background-color: var(--section-background);
+  background-color: var(--card-background);
 }
 .contact .info {
   padding: 10px 0 60px;
@@ -427,7 +452,7 @@ nav .links ul li:not(:last-child) a {
 .contact .info .label {
   font-size: 35px;
   font-weight: 800;
-  color: var(--secondary-color);
+  color: var(--minor-color);
   letter-spacing: -2px;
   margin-bottom: 15px;
 }
@@ -445,8 +470,11 @@ nav .links ul li:not(:last-child) a {
   font-size: 16px;
 }
 .contact .info .social i {
-  margin-left: 10px;
-  color: #2c4856;
+  margin-left: 20px;
+  color: var(--minor-color);
+}
+.contact .info .social i:hover {
+  color: var(--main-color);
 }
 @media (max-width: 767px) {
   .contact .info .label,
@@ -457,7 +485,7 @@ nav .links ul li:not(:last-child) a {
 /* End Contact */
 /* Start Footer */
 footer {
-  background-color: #2c4856;
+  background-color: var(--minor-color);
   color: white;
   padding: 30px 10px;
   text-align: center;
@@ -465,5 +493,5 @@ footer {
 }
 footer span {
   font-weight: bold;
-  color: #10cab7;
+  color: var(--main-color);
 }
