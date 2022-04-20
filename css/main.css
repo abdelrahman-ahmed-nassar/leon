@@ -82,11 +82,13 @@ body {
 nav {
   padding: 20px;
 }
+
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav .logo {
   width: 60px;
 }
@@ -177,11 +179,12 @@ nav .links ul li:not(:last-child) a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .landing .intro-text {
   width: 800px;
-  max-width: 100%;
+  /* max-width: 100%; */
   text-align: center;
 }
 
@@ -214,13 +217,13 @@ nav .links ul li:not(:last-child) a {
   gap: 20px;
 }
 .features .feature {
-  padding: 60px 40px;
+  padding: 60px 60px;
   text-align: center;
 }
-.features .feature:hover {
-  -webkit-box-shadow: 0px 4px 18px 0px rgb(36 39 46 / 10%);
-  -moz-box-shadow: 0px 4px 18px 0px rgba(36, 39, 46, 0.1);
-  box-shadow: 0px 4px 18px 0px rgba(36, 39, 46, 0.1);
+@media (max-width: 768px) {
+  .features .feature {
+    padding: 20px 60px;
+  }
 }
 
 .features .feature i {
@@ -239,14 +242,13 @@ nav .links ul li:not(:last-child) a {
 }
 
 /*********** services  ***********/
-.services h2 {
-  margin-top: 40px;
+.services {
+  padding-top: 60px;
 }
 .services .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-
   margin-top: 100px;
 }
 .services .services-content .srv {
@@ -309,7 +311,7 @@ nav .links ul li:not(:last-child) a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .portfolio .portfolio-content .card {
@@ -322,7 +324,7 @@ nav .links ul li:not(:last-child) a {
 
 .portfolio .portfolio-content .card img {
   max-width: 100%;
-  transition: 0.3s ease;
+  transition: .5s ease;
 }
 .portfolio .portfolio-content .card img:hover {
   transform: scale(1.15);
@@ -359,6 +361,7 @@ nav .links ul li:not(:last-child) a {
   margin-top: 45px;
   background-color: #fff;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .portfolio button:hover {
@@ -440,7 +443,8 @@ nav .links ul li:not(:last-child) a {
   color: #777;
 }
 /********** End About ************/
-/* Start Contact */
+
+/************* Start Contact **********/
 .contact {
   padding: 60px 0 60px;
   background-color: var(--card-background);
@@ -482,8 +486,9 @@ nav .links ul li:not(:last-child) a {
     font-size: 25px;
   }
 }
-/* End Contact */
-/* Start Footer */
+/***********  End Contact *************/
+
+/******* Start Footer ***********/
 footer {
   background-color: var(--minor-color);
   color: white;
