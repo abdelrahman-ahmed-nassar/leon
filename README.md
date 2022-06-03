@@ -13,7 +13,7 @@ The website is built using CSS flex-box and Grid layout and contain:
 - Contact section 
 
 
-# [live demo](https://abdelrhman-ahmed-kamal.github.io/Leon-agency/)
+# [live demo](https://abdelrhman-ahmed-kamal.github.io/leon-agency/)
 
 
 ![screen shot](Leon.png)
